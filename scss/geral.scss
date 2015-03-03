@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/*
+  Cliente: 
+  Projeto: 
+
+  --------------
+  PADRÕES DE CODIGO - Frameworks FED
+  --------------
+
+  Nossos projetos são desenvolvidos de acordo com um padrão de escrita.
+  Mais informações sobre ele em: www.webstandards.blog.br e www.frontenddevelopment.com.br
+*/
+
+
+// @import "fontes"; // estilos web fonts
+@import "elementos"; // biblioteca de classes com estilos gerais
+
+
+/*
+  --------------
+  ELEMENTOS e CLASSES
+  --------------
+*/
+
+
+/* ------- ELEMENTOS ------- */
+
+  /* reset */
+  @import "reset";
+
+  html { font: 100% Arial, Helvetica, sans-serif; color: $cor_textos; }
+  body { background-color: $cor_body; @include font-size(14px); }
+  
+  /* responsive media */
+  img, object, embed { max-width: 100%; height: auto; }
+  object, embed { height: 100%; }
+
+  img { display: inline-block; vertical-align: middle; }
+
+
+/* ------- CLASSES ------- */
+
+  /* paginação */
+  .paginacao {
+    li { display: inline-block;
+      a[rel="prev"], a[rel="next"] {
+        &:hover {
+        }
+      } // a
+    } // li
+  } // .paginacao
+  
+  /* magnific popup */
+  .js .mfp-bg { background: #fff; opacity: 0; transition: all .2s;
+    &.mfp-ready { opacity: .7; }
+  }
+
+  /* mfp-container */
+  .mfp-container { opacity: 0; transition: all .2s;
+    /* popup */
+    .popup { position: relative; margin: 0 auto;
+      .mfp-close {  }
+    } // .popup
+
+    .mfp-wrap.mfp-ready & { opacity: 1; }
+  } // .mfp-container
+
+  /* botões */
+  .botao { display: inline-block;
+    &:hover {  }
+  }
+
+  /* responsive video-embed */
+  .video-embed { position: relative; height: 0; padding-top: 25px; padding-bottom: 56.25%; /* 16:9 */
+    object, embed { position: absolute; top: 0; left: 0; width: 100%; }
+    iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  } // .video-embed
+
+
+/*
+  --------------
+  ESTRUTURA
+  --------------
+*/
+
+
+/* ------- TOPO ------- */
+.topo {
+} // .topo
+
+
+/* ------- CONTEÚDO ------- */
+.conteudo {
+} // .conteudo
+
+
+/* ------- RODAPÉ ------- */
+.rodape {
+} // .rodape
+
+
+/*
+  --------------
+  PÁGINAS e DEVICES ESPECÍFICOS
+  --------------
+*/
+
+// templates - estilos de páginas específicas
+@import "templates";
+
+// medium - dispositivos com telas intermediárias
+@media only screen and (min-width: $bp-med) {
+  @import "medium";
+}
+
+// large - dispositivos com telas grandes
+@media only screen and (min-width: $bp-large) {
+  @import "large"; // estilos específicos para dispositivos com telas grandes
+}

@@ -1,0 +1,55 @@
+/*
+  --------------
+  MEDIUM - Dispositivos com telas intermediárias
+  --------------
+*/
+
+
+/*
+  --------------
+  ELEMENTOS e CLASSES
+  --------------
+*/
+
+
+/* ------- ELEMENTOS ------- */
+body:after { content: 'medium'; display: none; }
+
+
+/* ------- CLASSES ------- */
+  
+  /* alinhamentos */
+  .direita { float: right; }
+  .esquerda { float: left; }
+  p {
+    &.direita,
+    &.esquerda { float: none; }
+  }
+
+
+/*
+  --------------
+  ESTRUTURA
+  --------------
+*/
+
+
+/* ------- TOPO ------- */
+.topo {
+} // .topo
+
+
+/* ------- CONTEÚDO ------- */
+.conteudo {
+} // .conteudo
+
+
+/* ------- RODAPÉ ------- */
+.rodape {
+} // .rodape
+
+
+
+
+// páginas específicas
+// @import "medium-templates"; // estilos para páginas específicas

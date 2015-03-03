@@ -1,0 +1,20 @@
+/* TEAM */
+  Front-End Developer: <seu nome>
+  Site: http://
+  Twitter: @
+  Location: Curitiba-PR
+
+  <seu cargo>: <seu nome>
+  Site: http://
+  Twitter: @
+  Location: Curitiba-PR
+
+
+/* THANKS */
+  Coopers - http://coopers.pro/
+
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Framework FED, Grunt, Bower, BrowserSync, SASS, Modernizr, jQuery
+  Software: Sublime Text, Photoshop, Versions, SourceTree, Parallels Desktop
