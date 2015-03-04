@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*
+  Cliente: 
+  Projeto: 
+
+  --------------
+  PADRÕES DE CODIGO - Frameworks FED
+  --------------
+
+  Nossos projetos são desenvolvidos de acordo com um padrão de escrita.
+  Mais informações sobre ele em: www.webstandards.blog.br e www.frontenddevelopment.com.br
+*/
+/*
+  --------------
+  BIBLIOTECA DE CLASSES
+  --------------
+*/
+/* ------- BREAKPOINTS ------- */
+/* ------- PALETA DE CORES ------- */
+/* ------- CLASSES ------- */
+/* alinhamentos */
+p.direita {
+  text-align: right; }
+p.esquerda {
+  text-align: left; }
+
+.centro {
+  text-align: center; }
+
+.rpl {
+  font: 0/0 a !important;
+  color: transparent !important; }
+
+.wrap {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word; }
+
+/*
+  --------------
+  ELEMENTOS e CLASSES
+  --------------
+*/
+/* ------- ELEMENTOS ------- */
+/* reset */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, menu, form, fieldset, legend, button, figure, section, summary {
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, summary, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+button, fieldset, iframe, img {
+  border: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield; }
+
+details summary::-webkit-details-marker {
+  display: none; }
+
+html {
+  font: 100% Arial, Helvetica, sans-serif;
+  color: #000; }
+
+body {
+  background-color: #fff;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+/* responsive media */
+img, object, embed {
+  max-width: 100%;
+  height: auto; }
+
+object, embed {
+  height: 100%; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* ------- CLASSES ------- */
+/* paginação */
+.paginacao li {
+  display: inline-block; }
+
+/* magnific popup */
+.js .mfp-bg {
+  background: #fff;
+  opacity: 0;
+  transition: all .2s; }
+  .js .mfp-bg.mfp-ready {
+    opacity: .7; }
+
+/* mfp-container */
+.mfp-container {
+  opacity: 0;
+  transition: all .2s;
+  /* popup */ }
+  .mfp-container .popup {
+    position: relative;
+    margin: 0 auto; }
+  .mfp-wrap.mfp-ready .mfp-container {
+    opacity: 1; }
+
+/* botões */
+.botao {
+  display: inline-block; }
+
+/* responsive video-embed */
+.video-embed {
+  position: relative;
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 56.25%;
+  /* 16:9 */ }
+  .video-embed object, .video-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*
+  --------------
+  ESTRUTURA
+  --------------
+*/
+/* ------- TOPO ------- */
+/* ------- CONTEÚDO ------- */
+/* ------- RODAPÉ ------- */
+/*
+  --------------
+  PÁGINAS e DEVICES ESPECÍFICOS
+  --------------
+*/
+/*
+  --------------
+  PÁGINAS ESPECÍFICAS
+  --------------
+*/
+/* ------- PÁGINA INICIAL ------- */
+@media only screen and (min-width: 37.5em) {
+  /*
+    --------------
+    MEDIUM - Dispositivos com telas intermediárias
+    --------------
+  */
+  /*
+    --------------
+    ELEMENTOS e CLASSES
+    --------------
+  */
+  /* ------- ELEMENTOS ------- */
+  body:after {
+    content: 'medium';
+    display: none; }
+
+  /* ------- CLASSES ------- */
+  /* alinhamentos */
+  .direita {
+    float: right; }
+
+  .esquerda {
+    float: left; }
+
+  p.direita, p.esquerda {
+    float: none; }
+
+  /*
+    --------------
+    ESTRUTURA
+    --------------
+  */
+  /* ------- TOPO ------- */
+  /* ------- CONTEÚDO ------- */
+  /* ------- RODAPÉ ------- */ }
+@media only screen and (min-width: 62.5em) {
+  /*
+    --------------
+    LARGE - Dispositivos com telas grandes
+    --------------
+  */
+  /*
+    --------------
+    ELEMENTOS e CLASSES
+    --------------
+  */
+  /* ------- ELEMENTOS ------- */
+  body:after {
+    content: 'large'; }
+
+  /* ------- CLASSES ------- */
+  /*
+    --------------
+    ESTRUTURA
+    --------------
+  */
+  /* ------- TOPO ------- */
+  /* ------- CONTEÚDO ------- */
+  /* ------- RODAPÉ ------- */ }
