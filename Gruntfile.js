@@ -129,7 +129,7 @@ module.exports = function(grunt) {
         },
       },
       jekyll: {
-        files: ['*.html', '_layouts/*.html', '_includes/*.md', 'css/*.css'],
+        files: ['*.html', '_layouts/*', '_includes/*', 'css/*.css'],
         tasks: ['jekyll']
       }
     },
