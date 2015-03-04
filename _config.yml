@@ -1,2 +1,1 @@
-watch: true
 exclude: ['node_modules', 'scss']

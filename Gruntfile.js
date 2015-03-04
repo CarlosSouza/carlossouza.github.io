@@ -33,8 +33,12 @@ module.exports = function(grunt) {
       },
     },
     jekyll: {
-      dest: '_site',
-      config: '_config.yml'
+      build: {
+        dest: '_site',
+        options: {
+          config: '_config.yml'
+        }
+      }
     },
     jshint: {
       options: {
@@ -107,27 +111,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src: [
-            "css/*.css",
-            "*.html",
-            "js/*.js"
-          ]
-        },
-        options: {
-          ghostMode: {
-            clicks: true,
-            location: true,
-            forms: true,
-            scroll: true
-          },
-          watchTask: true,
-          proxy: "localhost:8888"
-        }
-      }
-    },
     watch: {
       files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js', '../**/*.php'],
       gruntfile: {
@@ -138,16 +121,34 @@ module.exports = function(grunt) {
         files: 'scss/*.scss',
         tasks: ['sass', 'autoprefixer']
       },
-      jekyll: {
-        files: ['*.html', '*.md', '_layouts/*', '_includes/*', 'css/*'],
-        tasks: ['jekyll']
-      },
       scripts: {
         files: ['js/*'],
         tasks: ['uglify', 'uglify:bower', 'jshint'],
         options: {
           spawn: false,
         },
+      },
+      jekyll: {
+        files: ['*.html', '_layouts/*.html', '_includes/*.md', 'css/*.css'],
+        tasks: ['jekyll']
+      }
+    },
+    browserSync: {
+      bsFiles: {
+        src: [
+          "_site/*.html",
+          "_site/css/*.css"
+        ]
+      },
+      options: {
+        ghostMode: {
+          clicks: true,
+          location: true,
+          forms: true,
+          scroll: true
+        },
+        watchTask: true,
+        proxy: "localhost:8888"
       }
     }
   });
@@ -158,12 +159,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-jekyll');
+
 
   // Default task.
-  grunt.registerTask('default', ['bower_concat','imagemin','watch','browserSync']);
+  grunt.registerTask('default', ['bower_concat','browserSync','imagemin','watch']);
 
 };
