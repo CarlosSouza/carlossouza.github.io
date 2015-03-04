@@ -10,11 +10,7 @@
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
-<!-- abre .topo -->
-<header class="topo" role="banner">
-  <h1>Header</h1>
-</header>
-<!-- fecha .topo -->
+{% include topo.html %}
 
 <!-- abre .conteudo -->
 <div class="conteudo" role="main">
@@ -22,17 +18,7 @@
 </div>
 <!-- fecha .conteudo -->
 
-<!-- abre .rodape -->
-<footer class="rodape">
-  <h2>Footer</h2>
-</footer>
-<!-- fecha .rodape -->
-
-<!-- abre scripts -->
-<script src="js/plugins.min.js"></script>
-<script src="js/_bower.min.js"></script>
-<script src="js/main.min.js"></script>
-<!-- fecha scripts -->
+{% include rodape.html %}
 
 </body>
 </html>
